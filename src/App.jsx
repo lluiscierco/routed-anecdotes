@@ -134,7 +134,6 @@ const CreateNew = (props) => {
           reset
         </button>
       </form>
-      <button>reset</button>
     </div>
   );
 };
