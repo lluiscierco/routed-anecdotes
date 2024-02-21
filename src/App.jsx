@@ -107,6 +107,11 @@ const CreateNew = (props) => {
     });
     navigate("/");
   };
+  const handleReset = () => {
+    content.reset();
+    author.reset();
+    info.reset();
+  };
 
   return (
     <div>
@@ -114,18 +119,22 @@ const CreateNew = (props) => {
       <form onSubmit={handleSubmit}>
         <div>
           content
-          <input {...content} />
+          <input {...content.inputProps} />
         </div>
         <div>
           author
-          <input {...author} />
+          <input {...author.inputProps} />
         </div>
         <div>
           url for more info
-          <input {...info} />
+          <input {...info.inputProps} />
         </div>
-        <button>create</button>
+        <button type="Submit">create</button>
+        <button type="button" onClick={handleReset}>
+          reset
+        </button>
       </form>
+      <button>reset</button>
     </div>
   );
 };
